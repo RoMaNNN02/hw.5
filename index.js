@@ -109,8 +109,8 @@ alert("такого варіанту немає,спробуйте ще раз")
 } 
 // Створіть змінні для зберігання двох чисел та оператора (як у списку select).
 //  Виконайте відповідну операцію та виведіть результат. У випадку ділення на нуль — виведіть попередження.
-const num1 = "2";
-const num2 = "0";
+const num1 =2;
+const num2 = 0;
 let operator = "/";
 // if(operator ==="+"){
 //  alert("result = " + (Number(num1) + Number(num2)));
@@ -133,7 +133,11 @@ break
 case "*":
 alert("result = " + (Number(num1) * Number(num2)));
 break
-case "/":
-alert("result = " + (Number(num1) / Number(num2)));
-break
+  case "/":
+    if (num2 === 0) {
+      alert("ERROR!,ділити на 0 неможна");
+      break;
+    }
+    alert("result = " + Number(num1) / Number(num2));
+    break;
 } 
